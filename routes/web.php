@@ -16,6 +16,7 @@ Route::post('/contacts/confirm', [ContactController::class, 'confirm']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [AdminController::class, 'index']);
+    Route::get('/contacts/export', [ContactController::class, 'export']);
 });
 
 Route::delete('/admin/contacts/{contact}', [AdminController::class, 'destroy']);
