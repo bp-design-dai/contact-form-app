@@ -8,40 +8,51 @@
 
 また、タグ管理機能により、タグの作成・編集・削除を行うことができます。
 
+CSVエクスポート機能および公開API機能も実装しています。
+
 ---
 
 ## 実装機能
 
 ### お問い合わせ機能
 
-- お問い合わせ入力
-- 確認画面
-- 修正機能
-- お問い合わせ送信
-- サンクスページ
+* お問い合わせ入力
+* 確認画面
+* 修正機能
+* お問い合わせ送信
+* サンクスページ
 
 ### 認証機能
 
-- 管理者登録
-- ログイン
-- ログアウト
+* 管理者登録
+* ログイン
+* ログアウト
 
 ### 管理画面
 
-- お問い合わせ一覧
-- キーワード検索
-- 性別検索
-- カテゴリ検索
-- 日付検索
-- ページネーション
-- お問い合わせ詳細表示
-- お問い合わせ削除
+* お問い合わせ一覧
+* キーワード検索
+* 性別検索
+* カテゴリ検索
+* 日付検索
+* ページネーション
+* お問い合わせ詳細表示
+* お問い合わせ削除
+* CSVエクスポート
 
 ### タグ管理
 
-- タグ作成
-- タグ編集
-- タグ削除
+* タグ作成
+* タグ編集
+* タグ削除
+
+### API機能
+
+* お問い合わせ一覧取得API
+* お問い合わせ詳細取得API
+* お問い合わせ作成API
+* お問い合わせ更新API
+* お問い合わせ削除API
 
 ---
 
@@ -53,16 +64,16 @@
 
 ## 使用技術
 
-- PHP 8.2
-- Laravel 10.x
-- MySQL 8.0
-- Nginx
-- Docker
-- Laravel Sail
-- Laravel Fortify
-- Tailwind CSS 3.4
-- Alpine.js
-- phpMyAdmin
+* PHP 8.2
+* Laravel 10.x
+* MySQL 8.0
+* Nginx
+* Docker
+* Laravel Sail
+* Laravel Fortify
+* Tailwind CSS 3.4
+* Alpine.js
+* phpMyAdmin
 
 ---
 
@@ -144,21 +155,49 @@ docker compose exec laravel.test ./vendor/bin/pint --test
 
 ## APIエンドポイント一覧
 
-応用機能のため、現時点では未実装です。
+### お問い合わせ一覧取得
+
+```http
+GET /api/v1/contacts
+```
+
+### お問い合わせ詳細取得
+
+```http
+GET /api/v1/contacts/{contact}
+```
+
+### お問い合わせ作成
+
+```http
+POST /api/v1/contacts
+```
+
+### お問い合わせ更新
+
+```http
+PUT /api/v1/contacts/{contact}
+```
+
+### お問い合わせ削除
+
+```http
+DELETE /api/v1/contacts/{contact}
+```
 
 ---
 
 ## 開発環境URL
 
-- アプリケーション: http://localhost
-- phpMyAdmin: http://localhost:8080
+* アプリケーション: http://localhost
+* phpMyAdmin: http://localhost:8080
 
 ---
 
 ## 初期ログイン情報
 
-- メールアドレス: test@example.com
-- パスワード: password
+* メールアドレス: [test@example.com](mailto:test@example.com)
+* パスワード: password
 
 ---
 
